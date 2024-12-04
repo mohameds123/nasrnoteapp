@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/model/note_model.dart';
 
 import '../../core/utils/colors.dart';
 
 class NoteWidget extends StatelessWidget {
-  NotesModel notes;
-   NoteWidget({super.key, required this.notes});
+   NoteWidget({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,7 @@ class NoteWidget extends StatelessWidget {
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 10,vertical: 10),
             child: Text(
-              notes.headline,
+              "Meeting",
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
@@ -40,7 +38,7 @@ class NoteWidget extends StatelessWidget {
                   child: Text(
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    notes.description,
+                    "Meeting in amit",
                     style: TextStyle(
                       fontSize: 12,
                       color: ColorsManager.lightGrey,
@@ -51,7 +49,7 @@ class NoteWidget extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                 "${notes.time.hour}:${notes.time.minute}${notes.time.hour >= 12 ? "Pm" : "Am"}".toString() ,
+                 "3:00 pm" ,
                   style: TextStyle(
                     fontSize: 12,
                     color: ColorsManager.lightGrey,
